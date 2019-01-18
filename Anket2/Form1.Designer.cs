@@ -43,6 +43,9 @@
             this.buttonChange = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBFilename = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.labelListb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelAnket
@@ -62,9 +65,9 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(532, 32);
+            this.listBox1.Location = new System.Drawing.Point(532, 68);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(193, 274);
+            this.listBox1.Size = new System.Drawing.Size(193, 238);
             this.listBox1.TabIndex = 1;
             // 
             // labelName
@@ -159,6 +162,7 @@
             this.buttonChange.TabIndex = 5;
             this.buttonChange.Text = "Change";
             this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonAdd
             // 
@@ -169,6 +173,7 @@
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBFilename
             // 
@@ -180,12 +185,46 @@
             this.textBFilename.TabIndex = 4;
             this.textBFilename.Text = "Filename";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(532, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 31);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(644, 340);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 31);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // labelListb
+            // 
+            this.labelListb.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelListb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelListb.Location = new System.Drawing.Point(532, 42);
+            this.labelListb.Name = "labelListb";
+            this.labelListb.Size = new System.Drawing.Size(193, 23);
+            this.labelListb.TabIndex = 6;
+            this.labelListb.Text = "People List";
+            this.labelListb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelListb);
             this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBFilename);
@@ -224,6 +263,9 @@
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBFilename;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelListb;
     }
 }
 
