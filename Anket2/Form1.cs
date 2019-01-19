@@ -133,7 +133,6 @@ namespace Anket2
                 textBoxName.ForeColor = Color.Black;
             }
         }
-
         private void textBoxSurname_Enter(object sender, EventArgs e)
         {
             if (textBoxSurname.Text == "Surname")
