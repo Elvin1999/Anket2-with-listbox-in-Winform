@@ -8,7 +8,25 @@ namespace Anket2
 {
     class Datebase
     {
-        private List<Person> people = new List<Person>();
+        private List<Person> people = new List<Person>()
+        {
+            {
+                new Person(){
+                    Name="John",
+                    Surname="Doe",
+                    Email="john.123@gmail.com",
+                    Phonenumber="505555555",
+                    Birthdate=new DateTime(1985,2,25)
+                }
+              },
+            new Person(){
+                    Name="Mike",
+                    Surname="Zemon",
+                    Email="mike_1212@mail.ru",
+                    Phonenumber="505555555",
+                    Birthdate=new DateTime(1992,1,12)
+                }
+        };
         public void Add(Person person)
         {
             people.Add(person);

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelAnket = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBPerson = new System.Windows.Forms.ListBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -43,9 +43,10 @@
             this.buttonChange = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBFilename = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.labelListb = new System.Windows.Forms.Label();
+            this.buttonRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelAnket
@@ -60,15 +61,16 @@
             this.labelAnket.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelAnket.UseCompatibleTextRendering = true;
             // 
-            // listBox1
+            // listBPerson
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(532, 68);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(193, 238);
-            this.listBox1.TabIndex = 1;
+            this.listBPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBPerson.FormattingEnabled = true;
+            this.listBPerson.ItemHeight = 18;
+            this.listBPerson.Location = new System.Drawing.Point(532, 68);
+            this.listBPerson.Name = "listBPerson";
+            this.listBPerson.Size = new System.Drawing.Size(193, 238);
+            this.listBPerson.TabIndex = 1;
+            this.listBPerson.SelectedIndexChanged += new System.EventHandler(this.listBPerson_SelectedIndexChanged);
             // 
             // labelName
             // 
@@ -117,46 +119,59 @@
             // 
             // maskedTbPhone
             // 
+            this.maskedTbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTbPhone.ForeColor = System.Drawing.Color.Gray;
             this.maskedTbPhone.Location = new System.Drawing.Point(191, 242);
             this.maskedTbPhone.Mask = "(+\\9\\94) 00-000-00-00";
             this.maskedTbPhone.Name = "maskedTbPhone";
-            this.maskedTbPhone.Size = new System.Drawing.Size(100, 20);
+            this.maskedTbPhone.Size = new System.Drawing.Size(117, 21);
             this.maskedTbPhone.TabIndex = 3;
             // 
             // maskedTbBirthDate
             // 
+            this.maskedTbBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTbBirthDate.ForeColor = System.Drawing.Color.Gray;
             this.maskedTbBirthDate.Location = new System.Drawing.Point(191, 287);
             this.maskedTbBirthDate.Mask = "00/00/0000";
             this.maskedTbBirthDate.Name = "maskedTbBirthDate";
-            this.maskedTbBirthDate.Size = new System.Drawing.Size(100, 20);
+            this.maskedTbBirthDate.Size = new System.Drawing.Size(117, 21);
             this.maskedTbBirthDate.TabIndex = 3;
             this.maskedTbBirthDate.ValidatingType = typeof(System.DateTime);
             // 
             // textBoxName
             // 
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(192, 112);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.Size = new System.Drawing.Size(116, 21);
             this.textBoxName.TabIndex = 4;
+            this.textBoxName.Text = "Name";
             // 
             // textBoxSurname
             // 
+            this.textBoxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSurname.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSurname.Location = new System.Drawing.Point(192, 157);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSurname.Size = new System.Drawing.Size(116, 21);
             this.textBoxSurname.TabIndex = 4;
+            this.textBoxSurname.Text = "Surname";
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.Gray;
             this.textBoxEmail.Location = new System.Drawing.Point(191, 199);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(132, 21);
             this.textBoxEmail.TabIndex = 4;
+            this.textBoxEmail.Text = "email@example.com";
             // 
             // buttonChange
             // 
             this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonChange.Location = new System.Drawing.Point(295, 328);
+            this.buttonChange.Location = new System.Drawing.Point(218, 328);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(90, 32);
             this.buttonChange.TabIndex = 5;
@@ -167,7 +182,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAdd.Location = new System.Drawing.Point(295, 366);
+            this.buttonAdd.Location = new System.Drawing.Point(218, 366);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(90, 32);
             this.buttonAdd.TabIndex = 5;
@@ -177,7 +192,7 @@
             // 
             // textBFilename
             // 
-            this.textBFilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBFilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBFilename.ForeColor = System.Drawing.Color.Gray;
             this.textBFilename.Location = new System.Drawing.Point(532, 312);
             this.textBFilename.Name = "textBFilename";
@@ -185,25 +200,27 @@
             this.textBFilename.TabIndex = 4;
             this.textBFilename.Text = "Filename";
             // 
-            // button1
+            // buttonLoad
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(532, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Load";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(532, 340);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(81, 31);
+            this.buttonLoad.TabIndex = 5;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
-            // button2
+            // buttonSave
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(644, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 31);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(644, 340);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(81, 31);
+            this.buttonSave.TabIndex = 5;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // labelListb
             // 
@@ -216,6 +233,16 @@
             this.labelListb.Text = "People List";
             this.labelListb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemove.Location = new System.Drawing.Point(329, 328);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(90, 32);
+            this.buttonRemove.TabIndex = 5;
+            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,8 +250,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelListb);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBFilename);
@@ -237,7 +265,7 @@
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBPerson);
             this.Controls.Add(this.labelAnket);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -249,7 +277,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelAnket;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBPerson;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.Label labelEmail;
@@ -263,9 +291,10 @@
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBFilename;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label labelListb;
+        private System.Windows.Forms.Button buttonRemove;
     }
 }
 
