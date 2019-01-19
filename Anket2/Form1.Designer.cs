@@ -46,7 +46,6 @@
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelListb = new System.Windows.Forms.Label();
-            this.buttonRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelAnket
@@ -124,7 +123,7 @@
             this.maskedTbPhone.Location = new System.Drawing.Point(191, 242);
             this.maskedTbPhone.Mask = "(+\\9\\94) 00-000-00-00";
             this.maskedTbPhone.Name = "maskedTbPhone";
-            this.maskedTbPhone.Size = new System.Drawing.Size(117, 21);
+            this.maskedTbPhone.Size = new System.Drawing.Size(132, 21);
             this.maskedTbPhone.TabIndex = 3;
             // 
             // maskedTbBirthDate
@@ -134,7 +133,7 @@
             this.maskedTbBirthDate.Location = new System.Drawing.Point(191, 287);
             this.maskedTbBirthDate.Mask = "00/00/0000";
             this.maskedTbBirthDate.Name = "maskedTbBirthDate";
-            this.maskedTbBirthDate.Size = new System.Drawing.Size(117, 21);
+            this.maskedTbBirthDate.Size = new System.Drawing.Size(132, 21);
             this.maskedTbBirthDate.TabIndex = 3;
             this.maskedTbBirthDate.ValidatingType = typeof(System.DateTime);
             // 
@@ -144,9 +143,11 @@
             this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(192, 112);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(116, 21);
+            this.textBoxName.Size = new System.Drawing.Size(131, 21);
             this.textBoxName.TabIndex = 4;
             this.textBoxName.Text = "Name";
+            this.textBoxName.Enter += new System.EventHandler(this.textBoxName_Enter);
+            this.textBoxName.Leave += new System.EventHandler(this.textBoxName_Leave);
             // 
             // textBoxSurname
             // 
@@ -154,9 +155,11 @@
             this.textBoxSurname.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSurname.Location = new System.Drawing.Point(192, 157);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(116, 21);
+            this.textBoxSurname.Size = new System.Drawing.Size(131, 21);
             this.textBoxSurname.TabIndex = 4;
             this.textBoxSurname.Text = "Surname";
+            this.textBoxSurname.Enter += new System.EventHandler(this.textBoxSurname_Enter);
+            this.textBoxSurname.Leave += new System.EventHandler(this.textBoxSurname_Leave);
             // 
             // textBoxEmail
             // 
@@ -167,6 +170,8 @@
             this.textBoxEmail.Size = new System.Drawing.Size(132, 21);
             this.textBoxEmail.TabIndex = 4;
             this.textBoxEmail.Text = "email@example.com";
+            this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
+            this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
             // 
             // buttonChange
             // 
@@ -233,16 +238,6 @@
             this.labelListb.Text = "People List";
             this.labelListb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // buttonRemove
-            // 
-            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemove.Location = new System.Drawing.Point(329, 328);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(90, 32);
-            this.buttonRemove.TabIndex = 5;
-            this.buttonRemove.Text = "Remove";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +247,6 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
-            this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBFilename);
@@ -294,7 +288,6 @@
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label labelListb;
-        private System.Windows.Forms.Button buttonRemove;
     }
 }
 

@@ -109,5 +109,77 @@ namespace Anket2
             var result = JsonConvert.SerializeObject(datebase);
             File.WriteAllText(Filename + ".json", result);
         }
+
+        private void textBoxName_Enter(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == "Name")
+            {
+                textBoxName.Text = String.Empty;
+            }
+            else
+            {
+                textBoxName.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxName_Leave(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == String.Empty)
+            {
+                textBoxName.Text = "Name";
+            }
+            else
+            {
+                textBoxName.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxSurname_Enter(object sender, EventArgs e)
+        {
+            if (textBoxSurname.Text == "Surname")
+            {
+                textBoxSurname.Text = String.Empty;
+            }
+            else
+            {
+                textBoxSurname.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxSurname_Leave(object sender, EventArgs e)
+        {
+            if (textBoxSurname.Text == String.Empty)
+            {
+                textBoxSurname.Text = "Surname";
+            }
+            else
+            {
+                textBoxSurname.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxEmail_Enter(object sender, EventArgs e)
+        {
+            if (textBoxEmail.Text == "email@example.com")
+            {
+                textBoxEmail.Text = String.Empty;
+            }
+            else
+            {
+                textBoxEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxEmail_Leave(object sender, EventArgs e)
+        {
+            if (textBoxEmail.Text == String.Empty)
+            {
+                textBoxEmail.Text = "email@example.com";
+            }
+            else
+            {
+                textBoxEmail.ForeColor = Color.Black;
+            }
+        }
     }
 }
