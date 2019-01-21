@@ -14,6 +14,7 @@ namespace Anket2
 {
     public partial class Form1 : Form
     {
+        Datebase newdatebase = new Datebase();
         Datebase datebase = new Datebase();
         Person person = new Person();
         public Form1()
@@ -35,19 +36,15 @@ namespace Anket2
             person.Phonenumber = maskedTbPhone.Text;
             person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);//hiding problem
             datebase.Add(datebase.GetPerson(person));
-            listBPerson.DataSource = datebase.GetPeopleList();
+            newdatebase = datebase;
+            listBPerson.DataSource = newdatebase.GetPeopleList();
         }
-
+        
         private void buttonChange_Click(object sender, EventArgs e)
         {
             Point pointtemp = buttonChange.Location;
             buttonChange.Location = buttonAdd.Location;
             buttonAdd.Location = pointtemp;
-            textBoxName.Enabled = true;
-            textBoxSurname.Enabled = true;
-            textBoxEmail.Enabled = true;
-            maskedTbPhone.Enabled = true;
-            maskedTbBirthDate.Enabled = true;
             foreach (var item in this.Controls)
             {
                 if (item is TextBox tb)
@@ -63,6 +60,10 @@ namespace Anket2
             {
                 textBFilename.ForeColor = Color.Gray;
             }
+            var itemp = listBPerson.SelectedItem as Person;
+             datebase.Remove(itemp);
+            listBPerson.DataSource = null;
+            listBPerson.DataSource = newdatebase.GetPeopleList();
         }
         public bool CheckAccessToProgram { get; set; }
         private void listBPerson_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,12 +76,6 @@ namespace Anket2
                 textBoxEmail.Text = person.Email;
                 maskedTbPhone.Text = person.Phonenumber;
                 maskedTbBirthDate.Text = person.Birthdate.ToShortDateString();
-                textBoxName.Enabled = false;
-                textBoxSurname.Enabled = false;
-                textBoxEmail.Enabled = false;
-                maskedTbPhone.Enabled = false;
-                maskedTbBirthDate.Enabled = false;
-                CheckAccessToProgram = false;
             }
             CheckAccessToProgram = true;
         }
