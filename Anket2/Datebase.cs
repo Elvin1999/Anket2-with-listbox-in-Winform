@@ -27,6 +27,10 @@ namespace Anket2
                     Birthdate=new DateTime(1992,1,12)
                 }
         };
+        public Person GetPerson(Person person)
+        {
+            return person;
+        }
         public void Add(Person person)
         {
             people.Add(person);
@@ -39,5 +43,6 @@ namespace Anket2
         {
             return people;
         }
+        
     }
 }

@@ -20,12 +20,12 @@ namespace Anket2
         {
             InitializeComponent();
             listBPerson.DisplayMember = "Name";
-            //listBPerson.DataSource = datebase.GetPeopleList(); with problem
-            listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
+            listBPerson.DataSource = datebase.GetPeopleList();// with problem
+            //listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            listBPerson.DataSource = null;
             Point pointtemp = buttonChange.Location;
             buttonChange.Location = buttonAdd.Location;
             buttonAdd.Location = pointtemp;
@@ -33,11 +33,9 @@ namespace Anket2
             person.Surname = textBoxSurname.Text;
             person.Email = textBoxEmail.Text;
             person.Phonenumber = maskedTbPhone.Text;
-            person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);
-            //listBPerson.DataSource = datebase.GetPeopleList();
-            datebase.Add(person);
-            listBPerson.Items.Add(person);
-            //listBPerson.DataSource = datebase.GetPeopleList();            
+            person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);//hiding problem
+            datebase.Add(datebase.GetPerson(person));
+            listBPerson.DataSource = datebase.GetPeopleList();
         }
 
         private void buttonChange_Click(object sender, EventArgs e)
