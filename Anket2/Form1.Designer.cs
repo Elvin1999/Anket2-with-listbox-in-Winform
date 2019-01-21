@@ -50,6 +50,7 @@
             // 
             // labelAnket
             // 
+            this.labelAnket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelAnket.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAnket.ForeColor = System.Drawing.Color.Black;
             this.labelAnket.Location = new System.Drawing.Point(46, 32);
@@ -62,6 +63,7 @@
             // 
             // listBPerson
             // 
+            this.listBPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.listBPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBPerson.FormattingEnabled = true;
             this.listBPerson.ItemHeight = 18;
@@ -73,6 +75,7 @@
             // 
             // labelName
             // 
+            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName.Location = new System.Drawing.Point(85, 112);
             this.labelName.Name = "labelName";
@@ -82,6 +85,7 @@
             // 
             // labelSurname
             // 
+            this.labelSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSurname.Location = new System.Drawing.Point(85, 158);
             this.labelSurname.Name = "labelSurname";
@@ -91,6 +95,7 @@
             // 
             // labelEmail
             // 
+            this.labelEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.Location = new System.Drawing.Point(85, 200);
             this.labelEmail.Name = "labelEmail";
@@ -100,6 +105,7 @@
             // 
             // labelPhone
             // 
+            this.labelPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPhone.Location = new System.Drawing.Point(85, 243);
             this.labelPhone.Name = "labelPhone";
@@ -109,6 +115,7 @@
             // 
             // labelBirthDate
             // 
+            this.labelBirthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.labelBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBirthDate.Location = new System.Drawing.Point(85, 288);
             this.labelBirthDate.Name = "labelBirthDate";
@@ -118,6 +125,7 @@
             // 
             // maskedTbPhone
             // 
+            this.maskedTbPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.maskedTbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTbPhone.ForeColor = System.Drawing.Color.Gray;
             this.maskedTbPhone.Location = new System.Drawing.Point(191, 242);
@@ -128,6 +136,7 @@
             // 
             // maskedTbBirthDate
             // 
+            this.maskedTbBirthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.maskedTbBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTbBirthDate.ForeColor = System.Drawing.Color.Gray;
             this.maskedTbBirthDate.Location = new System.Drawing.Point(191, 287);
@@ -139,6 +148,7 @@
             // 
             // textBoxName
             // 
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(192, 112);
@@ -151,6 +161,7 @@
             // 
             // textBoxSurname
             // 
+            this.textBoxSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.textBoxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSurname.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSurname.Location = new System.Drawing.Point(192, 157);
@@ -163,6 +174,7 @@
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.Gray;
             this.textBoxEmail.Location = new System.Drawing.Point(191, 199);
@@ -175,28 +187,31 @@
             // 
             // buttonChange
             // 
+            this.buttonChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonChange.Location = new System.Drawing.Point(218, 328);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(90, 32);
             this.buttonChange.TabIndex = 5;
             this.buttonChange.Text = "Change";
-            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.UseVisualStyleBackColor = false;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.Location = new System.Drawing.Point(218, 366);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(90, 32);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBFilename
             // 
+            this.textBFilename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.textBFilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBFilename.ForeColor = System.Drawing.Color.Gray;
             this.textBFilename.Location = new System.Drawing.Point(532, 312);
@@ -209,29 +224,31 @@
             // 
             // buttonLoad
             // 
+            this.buttonLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLoad.Location = new System.Drawing.Point(532, 340);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(81, 31);
             this.buttonLoad.TabIndex = 5;
             this.buttonLoad.Text = "Load";
-            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.UseVisualStyleBackColor = false;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // buttonSave
             // 
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave.Location = new System.Drawing.Point(644, 340);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(81, 31);
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // labelListb
             // 
-            this.labelListb.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelListb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(190)))), ((int)(((byte)(174)))));
             this.labelListb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelListb.Location = new System.Drawing.Point(532, 42);
             this.labelListb.Name = "labelListb";
@@ -244,6 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(190)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelListb);
             this.Controls.Add(this.buttonAdd);

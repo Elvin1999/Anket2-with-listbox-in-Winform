@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Anket2
 {
     public partial class Form1 : Form
@@ -97,7 +96,6 @@ namespace Anket2
         {
             Filename = textBFilename.Text;
             var result = JsonConvert.SerializeObject(datebase.GetPeopleList());
-            Guid guid = Guid.NewGuid();
             File.WriteAllText(Filename, result);
         }
         private void textBoxName_Enter(object sender, EventArgs e)
