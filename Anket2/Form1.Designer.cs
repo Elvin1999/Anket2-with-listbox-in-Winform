@@ -50,7 +50,7 @@
             // 
             // labelAnket
             // 
-            this.labelAnket.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnket.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAnket.ForeColor = System.Drawing.Color.Black;
             this.labelAnket.Location = new System.Drawing.Point(46, 32);
             this.labelAnket.Name = "labelAnket";
@@ -204,6 +204,8 @@
             this.textBFilename.Size = new System.Drawing.Size(193, 22);
             this.textBFilename.TabIndex = 4;
             this.textBFilename.Text = "Filename";
+            this.textBFilename.Enter += new System.EventHandler(this.textBFilename_Enter);
+            this.textBFilename.Leave += new System.EventHandler(this.textBFilename_Leave);
             // 
             // buttonLoad
             // 

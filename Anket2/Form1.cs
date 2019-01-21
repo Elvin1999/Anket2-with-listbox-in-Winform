@@ -14,7 +14,6 @@ namespace Anket2
 {
     public partial class Form1 : Form
     {
-        //Datebase newdatebase = new Datebase();
         Datebase datebase = new Datebase();
         Person person = new Person();
         public Form1()
@@ -37,7 +36,6 @@ namespace Anket2
             person.Phonenumber = maskedTbPhone.Text;
             person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);//hiding problem
             datebase.Add(datebase.GetPerson(person));
-            //newdatebase = datebase;
             listBPerson.DataSource = datebase.GetPeopleList();
         }
         private void buttonChange_Click(object sender, EventArgs e)
@@ -85,7 +83,6 @@ namespace Anket2
             Filename = textBFilename.Text;
             if (File.Exists(Filename))
             {
-                MessageBox.Show("Yes");
                 string result = File.ReadAllText(Filename);
                 var list = JsonConvert.DeserializeObject<List<Person>>(result);
                 datebase.SetList(list);
@@ -95,20 +92,14 @@ namespace Anket2
             {
                 MessageBox.Show($"{Filename} this file does not exist");
             }
-            //listBPerson.Items.Clear();
-            //listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
-
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Filename = textBFilename.Text;
             var result = JsonConvert.SerializeObject(datebase.GetPeopleList());
             Guid guid = Guid.NewGuid();
             File.WriteAllText(Filename, result);
-            //var result = JsonConvert.SerializeObject(datebase);
-            //File.WriteAllText(Filename, result);
         }
-
         private void textBoxName_Enter(object sender, EventArgs e)
         {
             if (textBoxName.Text == "Name")
@@ -120,7 +111,6 @@ namespace Anket2
                 textBoxName.ForeColor = Color.Black;
             }
         }
-
         private void textBoxName_Leave(object sender, EventArgs e)
         {
             if (textBoxName.Text == String.Empty)
@@ -143,7 +133,6 @@ namespace Anket2
                 textBoxSurname.ForeColor = Color.Black;
             }
         }
-
         private void textBoxSurname_Leave(object sender, EventArgs e)
         {
             if (textBoxSurname.Text == String.Empty)
@@ -166,7 +155,6 @@ namespace Anket2
                 textBoxEmail.ForeColor = Color.Black;
             }
         }
-
         private void textBoxEmail_Leave(object sender, EventArgs e)
         {
             if (textBoxEmail.Text == String.Empty)
@@ -176,6 +164,30 @@ namespace Anket2
             else
             {
                 textBoxEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBFilename_Enter(object sender, EventArgs e)
+        {
+            if (textBFilename.Text == "Filename")
+            {
+                textBFilename.Text = String.Empty;
+            }
+            else
+            {
+                textBFilename.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBFilename_Leave(object sender, EventArgs e)
+        {
+            if (textBFilename.Text == String.Empty)
+            {
+                textBFilename.Text = "Filename";
+            }
+            else
+            {
+                textBFilename.ForeColor = Color.Black;
             }
         }
     }
