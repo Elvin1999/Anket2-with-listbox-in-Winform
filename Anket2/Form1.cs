@@ -38,8 +38,7 @@ namespace Anket2
             datebase.Add(datebase.GetPerson(person));
             newdatebase = datebase;
             listBPerson.DataSource = newdatebase.GetPeopleList();
-        }
-        
+        }        
         private void buttonChange_Click(object sender, EventArgs e)
         {
             Point pointtemp = buttonChange.Location;
@@ -98,9 +97,13 @@ namespace Anket2
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Filename = textBFilename.Text;
+            MessageBox.Show(datebase.GetPeopleList()[0].Name);
             var result = JsonConvert.SerializeObject(datebase);
-            File.WriteAllText(Filename + ".json", result);
+            Guid guid = Guid.NewGuid();
+            File.WriteAllText(guid.ToString() + ".json", result);
+            //Filename = textBFilename.Text;
+            //var result = JsonConvert.SerializeObject(datebase);
+            //File.WriteAllText(Filename, result);
         }
 
         private void textBoxName_Enter(object sender, EventArgs e)
