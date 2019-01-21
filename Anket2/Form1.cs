@@ -14,7 +14,7 @@ namespace Anket2
 {
     public partial class Form1 : Form
     {
-        Datebase newdatebase = new Datebase();
+        //Datebase newdatebase = new Datebase();
         Datebase datebase = new Datebase();
         Person person = new Person();
         public Form1()
@@ -26,6 +26,7 @@ namespace Anket2
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            person = new Person();
             listBPerson.DataSource = null;
             Point pointtemp = buttonChange.Location;
             buttonChange.Location = buttonAdd.Location;
@@ -36,8 +37,8 @@ namespace Anket2
             person.Phonenumber = maskedTbPhone.Text;
             person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);//hiding problem
             datebase.Add(datebase.GetPerson(person));
-            newdatebase = datebase;
-            listBPerson.DataSource = newdatebase.GetPeopleList();
+            //newdatebase = datebase;
+            listBPerson.DataSource = datebase.GetPeopleList();
         }        
         private void buttonChange_Click(object sender, EventArgs e)
         {
@@ -62,7 +63,7 @@ namespace Anket2
             var itemp = listBPerson.SelectedItem as Person;
              datebase.Remove(itemp);
             listBPerson.DataSource = null;
-            listBPerson.DataSource = newdatebase.GetPeopleList();
+            listBPerson.DataSource = datebase.GetPeopleList();
         }
         public bool CheckAccessToProgram { get; set; }
         private void listBPerson_SelectedIndexChanged(object sender, EventArgs e)
@@ -152,7 +153,6 @@ namespace Anket2
                 textBoxSurname.ForeColor = Color.Black;
             }
         }
-
         private void textBoxEmail_Enter(object sender, EventArgs e)
         {
             if (textBoxEmail.Text == "email@example.com")
