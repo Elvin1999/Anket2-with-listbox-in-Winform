@@ -39,7 +39,7 @@ namespace Anket2
             datebase.Add(datebase.GetPerson(person));
             //newdatebase = datebase;
             listBPerson.DataSource = datebase.GetPeopleList();
-        }        
+        }
         private void buttonChange_Click(object sender, EventArgs e)
         {
             Point pointtemp = buttonChange.Location;
@@ -61,7 +61,7 @@ namespace Anket2
                 textBFilename.ForeColor = Color.Gray;
             }
             var itemp = listBPerson.SelectedItem as Person;
-             datebase.Remove(itemp);
+            datebase.Remove(itemp);
             listBPerson.DataSource = null;
             listBPerson.DataSource = datebase.GetPeopleList();
         }
@@ -85,24 +85,26 @@ namespace Anket2
             Filename = textBFilename.Text;
             if (File.Exists(Filename))
             {
+                MessageBox.Show("Yes");
                 string result = File.ReadAllText(Filename);
-                var db = JsonConvert.DeserializeObject<Datebase>(result);
-                listBPerson.Items.Clear();
-                listBPerson.Items.AddRange(db.GetPeopleList().ToArray());
+                var list = JsonConvert.DeserializeObject<List<Person>>(result);
+                datebase.SetList(list);
+                listBPerson.DataSource = datebase.GetPeopleList();
             }
             else
             {
                 MessageBox.Show($"{Filename} this file does not exist");
             }
+            //listBPerson.Items.Clear();
+            //listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(datebase.GetPeopleList()[0].Name);
-            var result = JsonConvert.SerializeObject(datebase);
+            Filename = textBFilename.Text;
+            var result = JsonConvert.SerializeObject(datebase.GetPeopleList());
             Guid guid = Guid.NewGuid();
-            File.WriteAllText(guid.ToString() + ".json", result);
-            //Filename = textBFilename.Text;
+            File.WriteAllText(Filename, result);
             //var result = JsonConvert.SerializeObject(datebase);
             //File.WriteAllText(Filename, result);
         }

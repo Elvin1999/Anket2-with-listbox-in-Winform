@@ -39,6 +39,10 @@ namespace Anket2
         {
             people.Remove(person);
         }
+        public void SetList(List<Person> peoplelist)
+        {
+            people = peoplelist;
+        }
         public List<Person> GetPeopleList()
         {
             return people;
