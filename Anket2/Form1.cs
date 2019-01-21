@@ -19,13 +19,12 @@ namespace Anket2
         {
             InitializeComponent();
             listBPerson.DisplayMember = "Name";
-            listBPerson.DataSource = datebase.GetPeopleList();// with problem
-            //listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
+            listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             person = new Person();
-            listBPerson.DataSource = null;
+            listBPerson.Items.Clear();
             Point pointtemp = buttonChange.Location;
             buttonChange.Location = buttonAdd.Location;
             buttonAdd.Location = pointtemp;
@@ -33,9 +32,10 @@ namespace Anket2
             person.Surname = textBoxSurname.Text;
             person.Email = textBoxEmail.Text;
             person.Phonenumber = maskedTbPhone.Text;
-            person.Birthdate = DateTime.Parse(maskedTbBirthDate.Text);//hiding problem
+            person.Birthdate = dateTimePicker1.Value;//hiding problem
             datebase.Add(datebase.GetPerson(person));
-            listBPerson.DataSource = datebase.GetPeopleList();
+             listBPerson.DisplayMember = "Name";
+            listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
         private void buttonChange_Click(object sender, EventArgs e)
         {
@@ -59,8 +59,9 @@ namespace Anket2
             }
             var itemp = listBPerson.SelectedItem as Person;
             datebase.Remove(itemp);
-            listBPerson.DataSource = null;
-            listBPerson.DataSource = datebase.GetPeopleList();
+            listBPerson.Items.Clear();
+            listBPerson.DisplayMember = "Name";
+            listBPerson.Items.AddRange(datebase.GetPeopleList().ToArray());
         }
         public bool CheckAccessToProgram { get; set; }
         private void listBPerson_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace Anket2
                 textBoxSurname.Text = person.Surname;
                 textBoxEmail.Text = person.Email;
                 maskedTbPhone.Text = person.Phonenumber;
-                maskedTbBirthDate.Text = person.Birthdate.ToShortDateString();
+                dateTimePicker1.Value = person.Birthdate;
             }
             CheckAccessToProgram = true;
         }

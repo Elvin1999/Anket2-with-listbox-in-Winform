@@ -36,7 +36,6 @@
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.maskedTbPhone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTbBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelListb = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // labelAnket
@@ -131,20 +131,8 @@
             this.maskedTbPhone.Location = new System.Drawing.Point(191, 242);
             this.maskedTbPhone.Mask = "(+\\9\\94) 00-000-00-00";
             this.maskedTbPhone.Name = "maskedTbPhone";
-            this.maskedTbPhone.Size = new System.Drawing.Size(132, 21);
+            this.maskedTbPhone.Size = new System.Drawing.Size(201, 21);
             this.maskedTbPhone.TabIndex = 3;
-            // 
-            // maskedTbBirthDate
-            // 
-            this.maskedTbBirthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(216)))), ((int)(((byte)(201)))));
-            this.maskedTbBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTbBirthDate.ForeColor = System.Drawing.Color.Gray;
-            this.maskedTbBirthDate.Location = new System.Drawing.Point(191, 287);
-            this.maskedTbBirthDate.Mask = "00/00/0000";
-            this.maskedTbBirthDate.Name = "maskedTbBirthDate";
-            this.maskedTbBirthDate.Size = new System.Drawing.Size(132, 21);
-            this.maskedTbBirthDate.TabIndex = 3;
-            this.maskedTbBirthDate.ValidatingType = typeof(System.DateTime);
             // 
             // textBoxName
             // 
@@ -153,7 +141,7 @@
             this.textBoxName.ForeColor = System.Drawing.Color.Gray;
             this.textBoxName.Location = new System.Drawing.Point(192, 112);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(131, 21);
+            this.textBoxName.Size = new System.Drawing.Size(200, 21);
             this.textBoxName.TabIndex = 4;
             this.textBoxName.Text = "Name";
             this.textBoxName.Enter += new System.EventHandler(this.textBoxName_Enter);
@@ -166,7 +154,7 @@
             this.textBoxSurname.ForeColor = System.Drawing.Color.Gray;
             this.textBoxSurname.Location = new System.Drawing.Point(192, 157);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(131, 21);
+            this.textBoxSurname.Size = new System.Drawing.Size(200, 21);
             this.textBoxSurname.TabIndex = 4;
             this.textBoxSurname.Text = "Surname";
             this.textBoxSurname.Enter += new System.EventHandler(this.textBoxSurname_Enter);
@@ -179,7 +167,7 @@
             this.textBoxEmail.ForeColor = System.Drawing.Color.Gray;
             this.textBoxEmail.Location = new System.Drawing.Point(191, 199);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(132, 21);
+            this.textBoxEmail.Size = new System.Drawing.Size(201, 21);
             this.textBoxEmail.TabIndex = 4;
             this.textBoxEmail.Text = "email@example.com";
             this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
@@ -257,12 +245,20 @@
             this.labelListb.Text = "People List";
             this.labelListb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(192, 288);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(190)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelListb);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSave);
@@ -272,7 +268,6 @@
             this.Controls.Add(this.textBFilename);
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.maskedTbBirthDate);
             this.Controls.Add(this.maskedTbPhone);
             this.Controls.Add(this.labelBirthDate);
             this.Controls.Add(this.labelPhone);
@@ -298,7 +293,6 @@
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.Label labelBirthDate;
         private System.Windows.Forms.MaskedTextBox maskedTbPhone;
-        private System.Windows.Forms.MaskedTextBox maskedTbBirthDate;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.TextBox textBoxEmail;
@@ -308,6 +302,7 @@
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label labelListb;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
